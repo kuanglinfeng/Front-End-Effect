@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    var oBox = document.createElement('div');
+    oBox.id = 'box';
+    document.body.appendChild(oBox);
+
+    // 记录box的left 和 top
+    var position = [0, 0];
+    // 开始拖动的开关
+    var lock = false;
+    // 记录光标点击box位置距离box左上角的横向距离和纵向距离
+    var disX, disY;
+
+    oBox.onmousedown = function (e) {
+      // 打开拖动的开关
+      lock = true;
+      disX = e.clientX - position[0];
+      disY = e.clientY - position[1];
+    }
+
+    document.onmousemove = function (e) {
+      if (lock === true) {
+        var left = parseInt(oBox.style.left) || 0;
+        var top = parseInt(oBox.style.top) || 0;
+        // 记录新的left和top
+        position = [left, top];
+        oBox.style.left = e.clientX - disX + 'px';
+        oBox.style.top = e.clientY - disY + 'px';
+       }
+    }
+
+    document.onmouseup = function (e) {
+      lock = false;
+    }
+  
+  </script>
+</body>
+</html>
