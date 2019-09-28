@@ -6,3 +6,5 @@
 
 - js实现图片懒加载，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/3.JS实现图片懒加载
 
+- js实现页码插件，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/4.JS实现页码插件
+
