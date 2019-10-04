@@ -8,5 +8,5 @@
 
 - js实现页码插件，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/4.JS实现页码插件
 
-- js实现页码插件，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/5.JS实现无限滚动
+- js实现无限滚动，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/5.JS实现无限滚动
 
