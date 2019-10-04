@@ -46,7 +46,8 @@ function createLis(movies) {
  */
 function fetchDatas(callback) {
   setTimeout(() => {
-    if (page === 3) {
+    // page -> infinity 则无限滚动
+    if (page === 100) {
       // 模拟没有数据了
       callback([])
       return;
