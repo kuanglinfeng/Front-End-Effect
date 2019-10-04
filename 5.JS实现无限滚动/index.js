@@ -1,4 +1,5 @@
 var container = document.querySelector('ul')
+
 var loading = document.querySelector('.loading')
 
 var noData = document.querySelector('.no-data')
@@ -60,7 +61,6 @@ function fetchDatas(callback) {
 //   console.log(movies)
 // })
 
-
 function getMoreMovies() {
   // 该函数某个时间段只能运行一次
   if (!hasMoreDate || isFetching) {
@@ -86,10 +86,10 @@ function getMoreMovies() {
 
 getMoreMovies()
 
-
 // 注册滚动条事件
 
 window.onscroll = function () {
+  // 无限滚动的核心代码
   var de = document.documentElement
   var scrollHeight = de.scrollHeight
   var scrollTop = de.scrollTop
