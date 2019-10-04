@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3e1ca5c-2a22-41e5-afad-99503ca515bb" name="Default Changelist" comment="" />
+    <list default="true" id="c3e1ca5c-2a22-41e5-afad-99503ca515bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/4.JS实现页码插件/pager.js" beforeDir="false" afterPath="$PROJECT_DIR$/4.JS实现页码插件/pager.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -57,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="832" />

@@ -130,8 +130,6 @@ Pager.prototype.registerEvent = function () {
     } else if (e.target.classList.contains('number')) {
       this.toPage(+e.target.innerHTML)
     }
-
-
   })
 }
 
