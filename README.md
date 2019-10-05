@@ -10,3 +10,5 @@
 
 - js实现无限滚动，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/5.JS实现无限滚动
 
+- js实现无缝轮播，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/6.JS实现无缝轮播
+
