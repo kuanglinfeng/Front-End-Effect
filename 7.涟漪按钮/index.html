@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .ripple {
+        padding: 2em 4em;
+        border-radius: 0.3em;
+        position: relative;
+        background-color: skyblue;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .ripple::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1111;
+        transform: scale(0);
+        background-color: rgba(0, 0, 0, 0.45);
+      }
+
+      @keyframes spin {
+        0% {
+          transform: scale(0);
+          background-color: rgba(0, 0, 0, 0.45);
+        }
+
+        100% {
+          transform: scale(150);
+          background-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ripple">点我</div>
+
+    <script>
+      const btn = document.querySelector('.ripple')
+      let timer = null
+      let btnAfter = Array.from(document.styleSheets)
+        .reduce((a, b) => {
+          return a.concat(Array.from(b.cssRules))
+        }, [])
+        .filter(x => {
+          return x.selectorText === '.ripple::after'
+        })[0]
+
+      btn.onclick = function(e) {
+        clearTimeout(timer)
+        timer = null
+        btnAfter.style.top =
+          e.offsetY - parseInt(btnAfter.style.width) / 2 + 'px'
+        btnAfter.style.left =
+          e.offsetX - parseInt(btnAfter.style.height) / 2 + 'px'
+        btnAfter.style.animation = ''
+        timer = setTimeout(() => {
+          btnAfter.style.animation = 'spin 0.5s linear'
+        })
+      }
+    </script>
+  </body>
+</html>

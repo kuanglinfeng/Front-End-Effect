@@ -12,3 +12,4 @@
 
 - js实现无缝轮播，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/6.JS实现无缝轮播/index.html
 
+- 涟漪按钮，预览链接：https://kuanglinfeng.github.io/Front-End-Effect/7.涟漪按钮/index.html
